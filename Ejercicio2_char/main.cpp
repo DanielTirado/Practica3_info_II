@@ -113,9 +113,11 @@ int main()
                     else codificado[indice]='0';
                 }
 
+                int index_para_contar = (semilla*i);
+
                 // Contar los ceros y los unos
                 for (int f=0; f<semilla; f++){
-                    if (codificado[indice+1+f]=='0') cont_cero++;
+                    if (codificado[index_para_contar+f]=='0') cont_cero++;
                     else cont_uno++;
                 }
             }
@@ -139,9 +141,10 @@ int main()
                     }
                 }
 
+                int index_para_contar = (semilla*i);
                 // Contar los ceros y los unos
                 for (int f=0; f<semilla; f++){
-                    if (codificado[indice+1+f]=='0') cont_cero++;
+                    if (codificado[index_para_contar+f]=='0') cont_cero++;
                     else cont_uno++;
                 }
 
@@ -152,6 +155,7 @@ int main()
         for (int n=0; n<cantidad_de_bloques*semilla; n++){
             fout << codificado[n];
         }
+
         fout.close();
 
     }
